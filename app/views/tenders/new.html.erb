@@ -1,0 +1,50 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+  <%= simple_form_for @tender do |f| %>
+
+    <div class="form-inputs">
+      <%= f.input :tender_name,
+                  required: true %>
+    </div>
+
+    <div class="form-inputs">
+      <%= f.input :close_date,
+                required: true,
+                html5: true %>
+    </div>
+
+    <div class="form-inputs">
+      <%= f.label :description,
+                      label: "Tender description" %>
+      <%= f.rich_text_area :description,
+                            required: true %>
+    </div>
+
+    <div class="form-inputs">
+      <%= f.input :volume,
+                  required: true %>
+    </div>
+
+    <div class="form-inputs">
+      <%= f.input :minimum_bid,
+                label: "Minimum bid in £s",
+                as: :integer  %>
+    </div>
+
+    <%= f.input :drink_id,
+                :as => :select,
+                :collection => Drink.all.map { |a| [a.type, {:name => a.type}] },
+                as: :radio_buttons %>
+
+    <div class="form-actions">
+      <%= f.submit "Submit", class: "btn btn-ghost" %>
+    </div>
+
+  <% end %>
+</div>

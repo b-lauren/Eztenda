@@ -1,21 +1,18 @@
 class TendersController < ApplicationController
-  def index
-    @tenders = Tender.all
-  end
-
   def show
-    @tenders = Tender.find(params[:id])
+    @tender = Tender.find(params[:id])
   end
 
   def new
-    @tenders = Tender.new
+    @tender = Tender.new
   end
 
   def create
-    @tenders = Tender.new(tenders_params)
-    if @tenders.save
+    @tender = Tender.new(tenders_params)
+    @tender.user = current_user
+    if @tender.save
       flash[:success] = "Section successfully saved!"
-      redirect_to @tenders
+      redirect_to @tender
     else
       flash[:error] = "Found an error"
       render :new
@@ -25,6 +22,6 @@ class TendersController < ApplicationController
   private
 
   def tenders_params
-    params.require(:tenders).permit(:tender_name, :close_date, :description, :location, :volume, :minimum_bid)
+    params.require(:tenders).permit(:tender_name, :close_date, :description, :location, :volume, :minimum_bid, drink_id)
   end
 end
