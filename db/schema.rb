@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_20_130410) do
+ActiveRecord::Schema.define(version: 2021_03_20_163206) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bids", force: :cascade do |t|
+    t.text "offer_description"
+    t.integer "offer_price"
+    t.text "offer_add_ons"
+    t.string "wholesaler"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "drinks", force: :cascade do |t|
     t.string "type"
@@ -29,6 +38,19 @@ ActiveRecord::Schema.define(version: 2021_03_20_130410) do
     t.text "portion"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tenders", force: :cascade do |t|
+    t.string "tender_name"
+    t.date "close_date"
+    t.text "description"
+    t.string "location"
+    t.integer "volume"
+    t.integer "minimum_bid"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_tenders_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

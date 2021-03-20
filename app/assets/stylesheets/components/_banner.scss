@@ -1,0 +1,50 @@
+h1 {
+  font-weight: 700;
+  letter-spacing: 0.8;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  p {
+    font-size: 24px;
+    opacity: 0.8;
+    margin-bottom: 10px;
+  }
+}
+
+.section-a {
+  margin: 2rem 0;
+  a:hover {
+    color: $white;
+  }
+}
+
+.section-a .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-a h1 {
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+
+.section-a p {
+  margin: 1rem 0;
+}
+
+.animations img {
+  height: 10%;
+  width: 20%;
+}
+
+.animations {
+  max-height: 100vh;
+  padding-left: 120px;
+}

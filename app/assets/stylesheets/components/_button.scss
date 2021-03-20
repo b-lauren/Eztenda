@@ -1,0 +1,31 @@
+.brk-btn {
+    position: relative;
+    background: $black; 
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0.2em solid $black;
+    padding: 0.5em 1em;
+    border-radius: 30px;
+  }
+  .brk-btn a {
+    color: white;
+  }
+  .brk-btn a:hover {
+    color: white;
+    font-weight: bold;
+  }
+  .lgt-btn {
+    position: relative;
+    background: white; 
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0.2em solid white;
+    padding: 0.5em 1em;
+    border-radius: 30px;
+  }
+  .lgt-btn a:hover {
+    color: grey !important;
+    font-weight: bold;
+  }
