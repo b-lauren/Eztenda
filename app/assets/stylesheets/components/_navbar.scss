@@ -59,7 +59,7 @@ a {
 	border-bottom: 1px solid #191C1F;
     transition: all 300ms linear;
 }
-.navbar-light .navbar-toggler-icon:after, 
+.navbar-light .navbar-toggler-icon:after,
 .navbar-light .navbar-toggler-icon:before{
 	width: 24px;
 	position: absolute;
@@ -142,7 +142,7 @@ a {
 	width: auto;
 }
 .nav-link:hover {
-	color: #8B959E !important;	
+	color: #8B959E !important;
 }
 .nav-item a:hover {
 	color: #8B959E;
@@ -200,3 +200,19 @@ a {
 	width: 110px;
 	left: 99px;
 }
+
+
+.navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+

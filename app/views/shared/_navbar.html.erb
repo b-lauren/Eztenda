@@ -6,7 +6,7 @@
             <%= link_to "/", class: "navbar-brand" do %>
               <%= image_tag "logo" %>
             <% end %>
-   
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -18,10 +18,16 @@
                 </li>
               </ul>
                <div class="navigationbar">
-      <a href="/">Register</a>
+
+      <%= link_to "Register", new_user_registration_path %>
+      <%= link_to "Sign In", user_session_path %>
       <a href="/professional">Login</a>
       <div class="animation start-home"></div>
     </div>
+
+    <% if user_signed_in? %>
+       <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+    <% end %>
             </div>
           </nav>
         </div>
