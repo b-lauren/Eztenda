@@ -6,5 +6,4 @@ class User < ApplicationRecord
 
   has_many :bids
   has_many :tenders
-  belongs_to :product
 end
