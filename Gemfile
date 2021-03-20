@@ -34,6 +34,12 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 
+# To protect APIs
+gem 'dotenv-rails', groups: [:development, :test]
+
+# Content delivery network for images, videos and PDFs
+gem 'cloudinary', '~> 1.16.0'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
