@@ -1,0 +1,55 @@
+.static {
+
+  overflow: hidden;
+  width: 120%;
+
+  &:hover {
+            .mover {
+                animation-play-state: paused;
+            }
+        }
+
+  .mover {
+
+    display: flex;
+    flex-direction: column;
+
+    img {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &:hover {
+        transition-duration: 0.5s;
+        transform: scale(1.02);
+        color: #fff;
+      }
+      padding: 20px;
+      width: 200px;
+      height: 200px;
+      margin-left: 50px;
+      margin-right: 80px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      color: #fff;
+      border-radius: 16px;
+     }
+
+    .mover-right:nth-child(odd) {
+      align-self: flex-end;
+    }
+
+    animation: testanimation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    @keyframes testanimation {
+      from {
+        transform: translateY(0%)
+      }
+      to {
+        transform: translateY(-100%)
+      }
+    }
+  }
+}
