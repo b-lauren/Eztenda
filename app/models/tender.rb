@@ -3,4 +3,5 @@ class Tender < ApplicationRecord
   belongs_to :drink
 
   has_many :bids
+  has_rich_text :description
 end
