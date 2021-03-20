@@ -1,12 +1,202 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+a {
+	outline: none;
+	color: #191C1F;
 }
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+/* #Navigation
+================================================== */
+.start-header {
+	opacity: 1;
+	transform: translateY(0);
+	padding: 20px 0;
+	// box-shadow: 0 10px 30px 0 rgba(138, 155, 165, 0.15);
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+	background-color: white;
 }
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.start-header.scroll-on {
+	// box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+	padding: 10px 0;
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+	background-color: white;
+}
+.start-header.scroll-on .navbar-brand img{
+	height: 24px;
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+}
+.navigation-wrap{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+}
+.navbar{
+	padding: 0;
+}
+.navbar-brand img{
+	height: 45px;
+	width: auto;
+	display: block;
+}
+.navbar-toggler {
+	float: right;
+	border: none;
+	padding-right: 0;
+}
+.navbar-toggler:active,
+.navbar-toggler:focus {
+	outline: none;
+}
+.navbar-light .navbar-toggler-icon {
+	width: 24px;
+	height: 17px;
+	background-image: none;
+	position: relative;
+	border-bottom: 1px solid #191C1F;
+    transition: all 300ms linear;
+}
+.navbar-light .navbar-toggler-icon:after, 
+.navbar-light .navbar-toggler-icon:before{
+	width: 24px;
+	position: absolute;
+	height: 1px;
+	background-color: #191C1F;
+	top: 0;
+	left: 0;
+	content: '';
+	z-index: 2;
+    transition: all 300ms linear;
+}
+.navbar-light .navbar-toggler-icon:after{
+	top: 8px;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+	transform: rotate(45deg);
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+	transform: translateY(8px) rotate(-45deg);
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+	border-color: transparent;
+}
+.nav-link{
+	color: #212121 !important;
+	font-weight: 500;
+    transition: all 200ms linear;
+}
+// .nav-item:hover .nav-link{
+// 	color: #212112 !important;
+// }
+.nav-item.active .nav-link{
+	background-color: white !important;
+}
+.nav-link {
+	padding: 5px 0 !important;
+	display: inline-block;
+}
+.nav-item:after{
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	content: '';
+	background-color: #212112;
+	opacity: 0;
+    transition: all 200ms linear;
+}
+.position-btn:before{
+}
+.nav-item:hover:after{
+	bottom: 0;
+	opacity: 1;
+}
+.nav-item.active:hover:after{
+	opacity: 0;
+}
+.nav-item{
+	position: relative;
+    transition: all 200ms linear;
+}
+.pricing-switcher a:hover {
+	color: #333;
+}
+/* #Link to page
+================================================== */
+.navbar-nav {
+	padding: 15px;
+}
+.logo {
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	display: block;
+	z-index: 100;
+}
+.logo img {
+	height: 40px;
+	width: auto;
+}
+.nav-link:hover {
+	color: #8B959E !important;	
+}
+.nav-item a:hover {
+	color: #8B959E;
+}
+// #navbarSupportedContent a:hover {
+// 	color: #8B959E;
+// }
+// business button liquid
+.navigationbar {
+	position: relative;
+	width: 220px;
+	height: 47px;
+	background: $white;
+	border-radius: 35px;
+	border: solid $white 5px;
+	font-size: 0;
+}
+.navigationbar a{
+	font-size: 13px;
+	color: #191C1F;
+	text-decoration: none;
+	line-height: 50px;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	text-align: center;
+	margin-top: -3%;
+}
+.navigationbar .animation{
+	position: absolute;
+	margin-bottom: 0.5%;
+	width: 110%;
+	height: 100%;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
+	/* height: 5px; */
+	top: 0;
+	/* bottom: 0; */
+	z-index: 0;
+	background: white;
+	border-radius: 35px;
+	transition: all .5s ease 0s;
+}
+.navigationbar a:nth-child(1){
+	width: 100px;
+}
+.navigationbar .start-home, a:nth-child(1):hover~.animation{
+	width: 110px;
+	left: 0;
+}
+.navigationbar a:nth-child(2){
+	width: 110px;
+}
+.navigationbar a:nth-child(2):hover~.animation{
+	width: 110px;
+	left: 99px;
 }
