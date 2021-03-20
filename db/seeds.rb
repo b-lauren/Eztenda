@@ -12,6 +12,8 @@ User.destroy_all
 
 Drink.destroy_all
 
+Product.destroy_all
+
 puts "Creating users...."
 
 heineken = User.create!(email: "selling@heineken.com", password: "secret", company: "Heineken", address: "20-22 Elsley Rd, Great Titchfield St, Fitzrovia, London W1W 8BE")
