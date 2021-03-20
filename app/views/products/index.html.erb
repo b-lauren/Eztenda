@@ -1,11 +1,18 @@
- <h1 class="mt-5">aaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
-  <h1>aaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+<div class="products-index-banner">
+    <h2>Spend less time doing admin and more time providing great service</h2>
+</div>
 
-
-
- <% @products.each do |product|%>
-   <h2><%= product.name %></h2>
-    <h1><%= product.description %></h1>
- <% end %>
-
-
+<div class="drink-index-top">
+<section class="hero-section">
+  <div class="card-grid">
+    <% @products.each do |product|%>
+      <a class="card" href="#">
+        <div class="card__background_product" style="background-image: url(https://images.unsplash.com/photo-1522877341927-e5dc72935d29?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=668&q=80)"></div>
+        <div class="card__content">
+          <p class="card__category"><%= product.name %></p>
+          <h3 class="card__heading_product"><%= product.description %></h3>
+        </div>
+      </a>
+    <% end %>
+</section>
+</div>
