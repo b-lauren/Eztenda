@@ -1,4 +1,5 @@
 class Product < ApplicationRecord
+
   belongs_to :drink
   has_many :users
 

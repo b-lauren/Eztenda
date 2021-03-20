@@ -18,6 +18,7 @@
                 </li>
               </ul>
                <div class="navigationbar">
+
       <%= link_to "Register", new_user_registration_path %>
       <%= link_to "Sign In", user_session_path %>
       <a href="/professional">Login</a>
@@ -27,8 +28,6 @@
     <% if user_signed_in? %>
        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
     <% end %>
-
-
             </div>
           </nav>
         </div>
