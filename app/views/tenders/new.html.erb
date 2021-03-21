@@ -14,53 +14,51 @@
     </div>
 
   <div class="card-body col-md-6">
-    <%= simple_form_for @tender do |f| %>
+<%= simple_form_for @tender do |f| %>
+    <div class="form-inputs">
+      <%= f.input :tender_name,
+                  required: true %>
+    </div>
+    <div class="form-inputs">
+      <%= f.input :start_date,
+                required: true,
+                html5: true %>
+    </div>
+    <div class="form-inputs">
+      <%= f.input :close_date,
+                required: true,
+                html5: true %>
+    </div>
+    <div class="form-inputs">
+      <%= f.label :description,
+                      label: "Tender description" %>
+      <%= f.rich_text_area :description,
+                            required: true %>
+    </div>
+    <div class="form-inputs">
+      <%= f.input :volume,
+                  required: true %>
+    </div>
+    <div class="form-inputs">
+      <%= f.input :minimum_bid,
+                label: "Minimum bid in £s",
+                as: :integer  %>
+    </div>
+    <%= f.input :drink_id,
+                :as => :select,
+                :collection => Drink.all.map { |a| [a.type, a.id, {:drink_id => a.type}] },
+                as: :radio_buttons %>
+    <div class="form-inputs">
+      <%= f.input :tender_auction_expiry,
+                required: true,
+                html5: true %>
+    </div>
+    <div class="form-actions">
+      <%= f.submit "Submit", class: "btn btn-ghost" %>
+    </div>
+  <% end %>
 
-      <div class="form-inputs">
-        <%= f.input :tender_name,
-                    required: true %>
-      </div>
 
-      <div class="form-inputs">
-        <%= f.input :close_date,
-                  required: true,
-                  html5: true %>
-      </div>
-
-      <div class="form-inputs">
-        <%= f.input :description,
-                              required: true, class: 'form-box' %>
-      </div>
-
-      <label class="btn btn-primary">
-        Add a file!
-        <span style="display:none;">
-          <%= f.file_field :image, required: true, multiple: true, name: 'picture' %>
-        </span>
-      </label>
-
-
-      <div class="form-inputs">
-        <%= f.input :volume,
-                    required: true %>
-      </div>
-
-      <div class="form-inputs">
-        <%= f.input :minimum_bid,
-                  label: "Minimum bid in £s",
-                  as: :integer  %>
-      </div>
-
-      <%= f.input :drink_id,
-                  :as => :select,
-                  :collection => Drink.all.map { |a| [a.type, {:name => a.type}] },
-                  as: :radio_buttons %>
-
-      <div class="form-actions">
-        <%= f.submit "Submit", class: "btn btn-ghost" %>
-      </div>
-
-    <% end %>
     </div>
   </div>
 </div>
