@@ -42,22 +42,22 @@ tequila = Drink.create!(type: "Tequila", description: "Spirit from mexico", unit
 tequila.photo.attach(io: open('https://images.unsplash.com/photo-1522877341927-e5dc72935d29?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=668&q=80'), filename: 'tequila.jpeg', content_type: 'image/jpeg')
 
 whiskey = Drink.create!(type: "Whiskey", description: "Whisky or whiskey is a type of distilled alcoholic beverage made from fermented grain mash or by distilling beer.", unit_of_measurement: "Bottles")
-whiskey.photo.attach(io: open('https://images.unsplash.com/photo-1522877341927-e5dc72935d29?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=668&q=80'), filename: 'whiskey.jpeg', content_type: 'image/jpeg')
+whiskey.photo.attach(io: open('https://images.unsplash.com/photo-1603596311111-b43c809e02a1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80'), filename: 'whiskey.jpeg', content_type: 'image/jpeg')
 
 wine = Drink.create!(type: "Wine", description: "Wine is an alcoholic drink typically made from fermented grape juice", unit_of_measurement: "Bottles")
-wine.photo.attach(io: open('https://images.unsplash.com/photo-1522877341927-e5dc72935d29?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=668&q=80'), filename: 'wine.jpeg', content_type: 'image/jpeg')
+wine.photo.attach(io: open('https://images.unsplash.com/photo-1553682544-4ccf2778c9a8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80'), filename: 'wine.jpeg', content_type: 'image/jpeg')
 
 vodka = Drink.create!(type: "Vodka", description: "Vodka is a clear distilled alcoholic beverage with different varieties originating in Poland, Russia and Sweden", unit_of_measurement: "Bottles")
-vodka.photo.attach(io: open('https://images.unsplash.com/photo-1522877341927-e5dc72935d29?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=668&q=80'), filename: 'vodka.jpeg', content_type: 'image/jpeg')
+vodka.photo.attach(io: open('https://images.unsplash.com/photo-1582903222004-6766a668447a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80'), filename: 'vodka.jpeg', content_type: 'image/jpeg')
 
 rum = Drink.create!(type: "Rum", description: "Rum is a liquor made by fermenting then distilling sugarcane molasses or sugarcane juice.", unit_of_measurement: "Bottles")
-rum.photo.attach(io: open('https://images.unsplash.com/photo-1522877341927-e5dc72935d29?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=668&q=80'), filename: 'rum.jpeg', content_type: 'image/jpeg')
+rum.photo.attach(io: open('https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80'), filename: 'rum.jpeg', content_type: 'image/jpeg')
 
 gin = Drink.create!(type: "Gin", description: "Gin is a distilled alcoholic drink that derives its predominant flavour from juniper berries", unit_of_measurement: "Bottles")
-gin.photo.attach(io: open('https://images.unsplash.com/photo-1522877341927-e5dc72935d29?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=668&q=80'), filename: 'gin.jpeg', content_type: 'image/jpeg')
+gin.photo.attach(io: open('https://images.unsplash.com/photo-1607182324626-7cd70522abc1?ixid=MXwxMjA3fDB8MHxwaG90[%E2%80%A6]VufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80'), filename: 'gin.jpeg', content_type: 'image/jpeg')
 
 beer = Drink.create!(type: "Beer", description: "Beer is one of the oldest and most widely consumed alcoholic drinks in the world, and the third most popular drink overall after water and tea.", unit_of_measurement: "Keg")
-beer.photo.attach(io: open('https://images.unsplash.com/photo-1522877341927-e5dc72935d29?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=668&q=80'), filename: 'beer.jpeg', content_type: 'image/jpeg')
+beer.photo.attach(io: open('https://images.unsplash.com/photo-1586993451228-09818021e309?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80'), filename: 'beer.jpeg', content_type: 'image/jpeg')
 
 
 puts "Creating products...."
