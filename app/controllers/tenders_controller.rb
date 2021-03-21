@@ -22,6 +22,7 @@ class TendersController < ApplicationController
   private
 
   def tenders_params
-    params.require(:tenders).permit(:tender_name, :close_date, :description, :location, :volume, :minimum_bid, drink_id)
+    params.require(:tender).permit(:tender_name, :start_date, :close_date, :description, :volume, :minimum_bid,
+                                    :drink_id, :tender_auction_expiry)
   end
 end
