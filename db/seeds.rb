@@ -7,9 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 
-require 'open-uri'
-require 'json'
-
 # url = open('https://images.unsplash.com/photo-1522877341927-e5dc72935d29?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=668&q=80')
 
 
@@ -20,6 +17,10 @@ User.destroy_all
 Drink.destroy_all
 
 Product.destroy_all
+
+Tender.destroy_all
+
+Bid.destroy_all
 
 puts "Creating users...."
 
@@ -63,6 +64,7 @@ puts "Creating products...."
 
 madness = Product.create!(name: "Method and Madness Single Malt" , description: "The first Irish single malt from Midleton in a very long time – French Limousin oak adds floral aromatics while bourbon casks provide a toasted, nutty character. One to savour.", drink_id: whiskey.id)
 madness.user_id = mandm.id
+madness.photo.attach(io: open('https://images.unsplash.com/photo-1522877341927-e5dc72935d29?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=668&q=80'), filename: 'madness.jpeg', content_type: 'image/jpeg')
 
 irish = Product.create!(name: "Irish Single Malt XO Part II", description: "Distilled at an unspecified location in Ireland, this is a deliciously fruity, malty whiskey that was bottled for the Belgian organisation The Nectar. Notes of banana, pears, rich malt, ginger and orange blossom.", drink_id: whiskey.id)
 bushmills = Product.create!(name: "Bushmills 21 Year Old", description: "A mix of bourbon and sherry casks matured for 19 years before the last two years are spent finishing in ex-Madeira casks, this is the top of Bushmills' regular range.", drink_id: whiskey.id)
