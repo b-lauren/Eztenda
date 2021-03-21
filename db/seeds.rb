@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
 
 puts "Cleaning database..."
 
@@ -16,8 +17,13 @@ Product.destroy_all
 
 puts "Creating users...."
 
-heineken = User.create!(email: "selling@heineken.com", password: "secret", company: "Heineken", address: "20-22 Elsley Rd, Great Titchfield St, Fitzrovia, London W1W 8BE")
-catandmutton = User.create!(email: "buying@catandmutton.com", password: "secret", company: "Cat and Mutton", address: "76 Broadway Market, Hackney, London E8 4QJ")
+heineken_img = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Heineken_logo.svg/1920px-Heineken_logo.svg.png')
+heineken = User.create!(email: "selling@heineken.com", password: "secret", company: "Heineken", address: "20-22 Elsley Rd, Great Titchfield St, Fitzrovia, London W1W 8BE", type: "Drinks brand - Sellers")
+heineken.photo.attach(io: heineken_img, filename: 'heineken.png', content_type: 'image/png')
+
+catandmutton_img = URI.open('https://www.catandmutton.com/wp-content/uploads/sites/50/2015/05/LOGONEW-710x194.png')
+catandmutton = User.create!(email: "buying@catandmutton.com", password: "secret", company: "Cat and Mutton", address: "76 Broadway Market, Hackney, London E8 4QJ", type: "Venue - Buyers")
+catandmutton.photo.attach(io: catandmutton_img, filename: 'catandmutton.png', content_type: 'image/png')
 
 puts "Creating drinks...."
 
