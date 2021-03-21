@@ -1,18 +1,18 @@
 .first-footer {
-    background-color: #F2F2F2;
+    background-color: #393938;
     padding:45px 0 20px;
     font-size:15px;
     line-height:24px;
-    color:#191C1F;
+    color: #393938;
     height: 250px;
   }
   .site-footer
   {
-    background-color: $white;
+    background-color: #393938;
     padding:45px 0 20px;
     font-size:15px;
     line-height:24px;
-    color:#F0F0F0;
+    color: $white;
   } 
   .site-footer img {
     max-height: 150px;
@@ -22,7 +22,7 @@
   }
   .site-footer hr
   {
-    border-top-color:#F0F0F0;
+    border-top-color:#393938;
     opacity:0.5
   }
   .site-footer hr.small
@@ -31,7 +31,7 @@
   }
   .site-footer h6
   {
-    color: $gray;
+    color: $white;
     font-size:16px;
     text-transform:uppercase;
     margin-top:5px;
@@ -50,6 +50,7 @@
   {
     padding-left:0;
     list-style:none;
+    color: $offwhite;
   }
   .footer-links li
   {
@@ -187,3 +188,8 @@
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
   }
+
+  .featured-on-entries {
+    display: flex;
+    justify-content: space-between;
+}
