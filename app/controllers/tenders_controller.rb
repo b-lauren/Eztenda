@@ -1,6 +1,7 @@
 class TendersController < ApplicationController
   def show
     @tender = Tender.find(params[:id])
+    @bids = Bid.all
   end
 
   def new
@@ -10,7 +11,7 @@ class TendersController < ApplicationController
   def create
     @tender = Tender.new(tenders_params)
     @tender.user = current_user
-    if @tender.save
+    if @tender.save!
       flash[:success] = "Section successfully saved!"
       redirect_to @tender
     else
