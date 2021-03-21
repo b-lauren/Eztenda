@@ -25,7 +25,7 @@ class DrinksController < ApplicationController
   private
 
   def drink_params
-    params.require(:drink).permit(:type, :description, :unit_of_measurement) #photo
+    params.require(:drink).permit(:type, :description, :unit_of_measurement, :photo) #photo
   end
 
 end
