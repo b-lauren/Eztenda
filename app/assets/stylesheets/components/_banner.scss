@@ -17,6 +17,7 @@ h1 {
 
 .section-a {
   margin: 2rem 0;
+  margin-top: 90px;
   a:hover {
     color: $white;
   }
@@ -28,6 +29,7 @@ h1 {
   grid-gap: 3rem;
   align-items: center;
   justify-content: center;
+
 }
 
 .section-a h1 {
@@ -46,5 +48,10 @@ h1 {
 
 .animations {
   max-height: 100vh;
-  padding-left: 120px;
+  padding-left: 0px;
+}
+
+
+.bannertext {
+  padding-right: 20px;
 }
