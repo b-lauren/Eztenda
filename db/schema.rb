@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_20_212735) do
+ActiveRecord::Schema.define(version: 2021_03_21_101406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,12 +79,14 @@ ActiveRecord::Schema.define(version: 2021_03_20_212735) do
     t.string "tender_name"
     t.date "close_date"
     t.text "description"
-    t.integer "volume"
+    t.text "volume"
     t.integer "minimum_bid"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
     t.bigint "drink_id"
+    t.date "start_date"
+    t.datetime "tender_auction_expiry"
     t.index ["drink_id"], name: "index_tenders_on_drink_id"
     t.index ["user_id"], name: "index_tenders_on_user_id"
   end
@@ -99,6 +101,7 @@ ActiveRecord::Schema.define(version: 2021_03_20_212735) do
     t.datetime "updated_at", precision: 6, null: false
     t.text "company"
     t.text "address"
+    t.text "type"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
