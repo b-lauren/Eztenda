@@ -4,4 +4,5 @@ class Tender < ApplicationRecord
 
   has_many :bids
   has_rich_text :description
+
 end
