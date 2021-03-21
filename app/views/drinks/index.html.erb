@@ -1,13 +1,29 @@
 <div class="drinks-index-banner">
-    <h2>Spend less time doing admin and more time providing great service</h2>
+    <h2>No hassle, no need to haggle. Just the best offers from local and national suppliers.</h2>
 
 </div>
+
+<%# 
+<h1>awwwwwwwwwwwwwwwwwww</h1>
+
+<h1>awwwwwwwwwwwwwwwwwww</h1>
+
+<h1>awwwwwwwwwwwwwwwwwww</h1>
+
+<h1>awwwwwwwwwwwwwwwwwww</h1> %>
+
+ <%# <% @drinks.each do |drink,index| %>
+	 <%#<%= drink.type %>
+   <%#<%= cl_image_tag drink.photo.key, height: 300, width: 400, crop: :fill %>   
+ <%#<% end %>
+ <%#<%= cl_image_tag @drinks[0].photo.key, height: 300, width: 400, crop: :fill     %>
+ <%#%>
 
 
 <div class="drink-index-top">
 <section class="hero-section">
   <div class="card-grid">
-    <a class="card" href="#">
+    <a class="card" href="http://localhost:3000/products">
       <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1522877341927-e5dc72935d29?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=668&q=80)"></div>
       <div class="card__content">
         <p class="card__category">Category</p>
@@ -35,11 +51,26 @@
         <h3 class="card__heading">Mezcal</h3>
       </div>
     </a>
-    
-  
-  
+  <section class="hero-section">
+    <div class="card-grid">
+      <% @drinks.each do |drink,index| %>
+        <a class="card" href="#">
+          <%# <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1522877341927-e5dc72935d29?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=668&q=80)"></div> %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path drink.photo.key, height: 300, crop: :fill %>')">
+          <div class="card__content">
+            <p class="card__category">Category</p>
+            <h3 class="card__heading"><%= drink.type%></h3>  
+            <%# link_to  drink.type, product_path(drink) %>
+          </div>
+        </a>
+      <% end %>
+    </div>
 </section>
 </div>
+</div> 
+
+
+
 <div class="drink-index-bottom">
 <section class="hero-section">
   <div class="card-grid">
@@ -71,8 +102,8 @@
         <h3 class="card__heading">Non-alchoholic</h3>
       </div>
     </a>
-    
+
   <div>
-  
+
 </section>
-</div>
+</div> 

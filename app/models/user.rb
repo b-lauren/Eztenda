@@ -4,7 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  USER_TYPE = ['Venue - Buyers', 'Drinks brand - Sellers']
+
+  validates :user_type, inclusion: { in: USER_TYPE }
+
   has_one_attached :photo
-  has_many :bids 
+  has_many :bids
   has_many :tenders
 end
