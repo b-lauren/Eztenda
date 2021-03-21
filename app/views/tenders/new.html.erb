@@ -14,6 +14,12 @@
     </div>
 
     <div class="form-inputs">
+      <%= f.input :start_date,
+                required: true,
+                html5: true %>
+    </div>
+
+    <div class="form-inputs">
       <%= f.input :close_date,
                 required: true,
                 html5: true %>
@@ -41,6 +47,12 @@
                 :as => :select,
                 :collection => Drink.all.map { |a| [a.type, {:name => a.type}] },
                 as: :radio_buttons %>
+
+    <div class="form-inputs">
+      <%= f.input :tender_auction_expiry,
+                required: true,
+                html5: true %>
+    </div>
 
     <div class="form-actions">
       <%= f.submit "Submit", class: "btn btn-ghost" %>
