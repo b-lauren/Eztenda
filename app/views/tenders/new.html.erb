@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <br>
 <br>
 <br>
@@ -11,6 +12,21 @@
     <div class="form-inputs">
       <%= f.input :tender_name,
                   required: true %>
+=======
+
+<!-- new -->
+<div class="drinks-index-banner">
+  <h2>Create a tender</h2>
+</div>
+
+
+<div class="page-wrapper bg-gra-01 p-t-180 p-b-100">
+
+<div class="wrapper">
+  <div class="card-3 row">
+    <div class="first-header">
+      <img src="https://pedrinospritz.com/wp-content/uploads/2020/09/Mobile-Hero-750-x-750-2.jpg" alt="">
+>>>>>>> Stashed changes
     </div>
 
     <div class="form-inputs">
@@ -25,6 +41,7 @@
                 html5: true %>
     </div>
 
+<<<<<<< Updated upstream
     <div class="form-inputs">
       <%= f.label :description,
                       label: "Tender description" %>
@@ -36,6 +53,25 @@
       <%= f.input :volume,
                   required: true %>
     </div>
+=======
+      <div class="form-inputs">
+        <%= f.input :description,
+                              required: true, class: 'form-box' %>
+      </div>
+
+      <label class="btn btn-primary">
+        Add a file!
+        <span style="display:none;">
+          <%= f.file_field :image, required: true, multiple: true, name: 'picture' %>
+        </span>
+      </label>
+
+
+      <div class="form-inputs">
+        <%= f.input :volume,
+                    required: true %>
+      </div>
+>>>>>>> Stashed changes
 
     <div class="form-inputs">
       <%= f.input :minimum_bid,
@@ -48,11 +84,17 @@
                 :collection => Drink.all.map { |a| [a.type, {:name => a.type}] },
                 as: :radio_buttons %>
 
+<<<<<<< Updated upstream
     <div class="form-inputs">
       <%= f.input :tender_auction_expiry,
                 required: true,
                 html5: true %>
     </div>
+=======
+      <div class="form-actions">
+        <%= f.submit "Submit", class: "btn btn-primary" %>
+      </div>
+>>>>>>> Stashed changes
 
     <div class="form-actions">
       <%= f.submit "Submit", class: "btn btn-ghost" %>
