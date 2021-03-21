@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_21_110832) do
+ActiveRecord::Schema.define(version: 2021_03_21_133032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 2021_03_21_110832) do
     t.bigint "product_id"
     t.bigint "tender_id"
     t.bigint "user_id"
+    t.string "state", default: "Pending"
     t.index ["product_id"], name: "index_bids_on_product_id"
     t.index ["tender_id"], name: "index_bids_on_tender_id"
     t.index ["user_id"], name: "index_bids_on_user_id"
@@ -93,6 +94,7 @@ ActiveRecord::Schema.define(version: 2021_03_21_110832) do
     t.bigint "drink_id"
     t.date "start_date"
     t.datetime "tender_auction_expiry"
+    t.string "status", default: "Open"
     t.index ["drink_id"], name: "index_tenders_on_drink_id"
     t.index ["user_id"], name: "index_tenders_on_user_id"
   end
