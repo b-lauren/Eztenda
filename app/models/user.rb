@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   USER_TYPE = ['Venue - Buyers', 'Drinks brand - Sellers']
 
-  validates :type, inclusion: { in: USER_TYPE }
+  validates :user_type, inclusion: { in: USER_TYPE }
 
   has_one_attached :photo
   has_many :bids
