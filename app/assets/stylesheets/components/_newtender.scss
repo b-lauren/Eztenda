@@ -31,14 +31,24 @@
 }
 .card-3 {
   background: $offwhite;
-  border-radius: 8px;
+  border-radius: 16px;
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   width: 100%;
   .first-header {
-    width: 50%;
+    width: 40%;
     background-size: cover;
     border: 8px;
-    // background-image: url("https://images.unsplash.com/photo-1527398317618-b3da8a79e0ca?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80");
+    img {
+      height: 100%;
+      width: 80%;
+      object-fit: cover;
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+      
+
+    }
+    }-image: url("https://pedrinospritz.com/wp-content/uploads/2020/11/Vermouth-Perfect-Serve.jpg");
+
   }
 
   .form-group text {
@@ -68,8 +78,44 @@
     width: 100%;
     padding: 37px 30px;
     padding-bottom: 45px;
+  
+ }
+hr {
+  background-color: #fff;
+}
+
+textarea.form-control {
+  height: auto;
+  border: 1px solid #393938 !important;
+  border-radius: 5px !important;
+}
+
+
+.button {
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.btn-primary {
+  background-color: #ea5a49 !important;
+  border-color: #ea5a49 !important;
+}
+
+.form-control:focus {
+  color: #ea5a49 !important;
+  background-color: #ECE4DD;
+  border-color: #ea5a49 !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #ea5a49;
+}
+
   }
 }
 hr {
   background-color: #fff;
 }
+
