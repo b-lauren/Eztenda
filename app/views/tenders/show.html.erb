@@ -1,8 +1,18 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="products-index-banner">
+    <h2>View Tender</h2>
+</div>
 
-<h1> <%= @tender.tender_name %> </h1>
+<div class="tender-show-container">
+  <div class="tender-info">
+    <h1> <%= @tender.tender_name %> </h1>
+    <p>Start Date: <%= @tender.start_date %></p>
+    <p>Close Date: <%= @tender.close_date %></p>
+    <p>Volume: <%= @tender.volume %></p>
+    <p>Minimum Bid: <%= @tender.minimum_bid %></p>
+  </div>
+    <div class="tender-pic">
+      <img src="https://images.unsplash.com/photo-1591667817588-57eca58b23c2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="">
+    </div>
+  </div>
+</div>
+

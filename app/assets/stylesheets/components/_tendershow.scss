@@ -1,0 +1,35 @@
+.tender-show-container {
+  width: 800px;
+  height: 350px;
+  margin: 50px auto;
+  background: #f4f4f4;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  flex-direction: row;
+}
+
+.tender-pic {
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.tender-info {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    margin-bottom: 25px;
+  }
+}
+
+.tender-pic {
+  width: 50%;
+}
