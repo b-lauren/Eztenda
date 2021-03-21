@@ -16,3 +16,38 @@
   </div>
 </div>
 
+
+<h1> <%= @tender.tender_name %> </h1>
+
+<%= link_to "Make a bid!", new_tender_bid_path(@tender), class: "btn btn-dark" %>
+
+
+<% if @bids.exists? %>
+  <div class="container">
+    <!-- Code your tabs here -->
+    <div class="tabs">
+      <a href="" class="tab active">Bids</a>
+      <a href="" class="tab">Messages</a>
+    </div>
+
+    <% @bids.each do |bid| %>
+      <div class="notifications">
+        <div class="notification">
+          <%= cl_image_tag bid.user.photo.key, class: "avatar-large" %>
+          <div class="notification-content">
+            <p><small> <%= bid.created_at.strftime("%A %B %e %Y") %> </small></p>
+            <p> <%= bid.user.company %> submitted a bid of £<%= bid.offer_price %></p>
+            <p> <%= bid.offer_add_ons %></p>
+            <p><%= link_to "Check out bid", bid_path(bid) %> </p>
+          </div>
+
+          <div class="notification-actions">
+            <a href="#">Mark as seen <i class="fas fa-check"></i></a>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <p>No bids yet!</p>
+<% end %>
